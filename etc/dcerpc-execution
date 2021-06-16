@@ -1,0 +1,13 @@
+dce_rpc_response::c$dce_rpc$endpoint + c$dce_rpc$operation contains any of the following:
+  svcctl::CreateServiceW
+  svcctl::CreateServiceA
+  svcctl::StartServiceW
+  svcctl::StartServiceA
+  IWbemServices::ExecMethod
+  IWbemServices::ExecMethodAsync
+  atsvc::JobAdd
+  ITaskSchedulerService::SchRpcRegisterTask
+  ITaskSchedulerService::SchRpcRun
+  ITaskSchedulerService::SchRpcEnableTask
+  
+Ref: https://github.com/mitre-attack/bzar#45-indicators-for-attck-execution
