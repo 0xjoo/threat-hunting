@@ -1,0 +1,6 @@
+DeviceFileEvents
+| where FileOriginUrl startswith "https://dl.dropboxusercontent.com/"
+    or FileOriginUrl startswith "https://drive.google.com/"
+| where isnotempty(FileOriginReferrerUrl)
+    and FileOriginReferrerUrl !startswith "https://www.dropbox.com/" 
+| where FileName in~ ("*.zip", "*.lnk")
