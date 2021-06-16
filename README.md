@@ -1,4 +1,4 @@
-# my personal threat hunting encyclopedia
+# sjoo's threat hunting encyclopedia
 Tools
 * Splunk
 * Microsoft Defender
