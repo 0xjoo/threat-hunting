@@ -1,4 +1,4 @@
-Ref: https://github.com/mitre-attack/bzar#32-sumstats-analytics-for-attck-lateral-movement-multiple-attempts
-
 smb1_tree_connect_andx_request::c$smb_state$path contains ADMIN$ or C$
 smb2_tree_connect_request::c$smb_state$path contains ADMIN$ or C$
+
+Ref: https://github.com/mitre-attack/bzar#32-sumstats-analytics-for-attck-lateral-movement-multiple-attempts
