@@ -1,0 +1,5 @@
+DeviceProcessEvents
+| where InitiatingProcessFileName =~ "wmiprvse.exe"
+| where FileName =~ "powershell.exe" and (ProcessCommandLine hasprefix "-e" or ProcessCommandLine contains "frombase64")
+| where ProcessCommandLine matches regex "[A-Za-z0-9+/]{50,}[=]{0,2}"
+| where ProcessCommandLine !has "Windows\\CCM\\"
