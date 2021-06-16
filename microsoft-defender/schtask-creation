@@ -1,0 +1,5 @@
+DeviceProcessEvents 
+| where FolderPath endswith "\\schtasks.exe"
+  and ProcessCommandLine has "/create"
+  and AccountSid != "S-1-5-18"
+
