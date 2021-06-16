@@ -1,0 +1,4 @@
+wbadmin.exe delete catalog –quiet
+wbadmin delete systemstatebackup
+bcdedit.exe /set {{default}} bootstatuspolicy ignoreallfailures & bcdedit /set {{default}} recoveryenabled no
+HKEY_CURRENT_USER\Software\Policies\Microsoft\PreviousVersions\DisableLocalPage
