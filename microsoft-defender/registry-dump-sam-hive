@@ -1,0 +1,3 @@
+DeviceProcessEvents
+| where FileName =~ "reg.exe"
+| where ProcessCommandLine has_any(@"save HKLM\SAM", @"save HKEY_LOCAL_MACHINE\SAM")
