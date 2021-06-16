@@ -1,0 +1,1 @@
+url IN ("*&#*", "*script%3E*", "*'*", "*cookie*", "*alert(*", "*&lt;/*", "*@@*". "*%40%40*", "*<src*", "*%3Csrc*", "*javascript:alert*", "*&lt;*", "*%3C%2F*", "*..*", "*%2E%2E*", "*alter*", "*create*", "*delete*", "*drop*", "*exec*", "*insert*", "*merge*", "*select*", "*update*", "*union*")
