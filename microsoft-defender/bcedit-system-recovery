@@ -1,0 +1,3 @@
+DeviceProcessEvents
+| where ProcessCommandLine has "bcdedit"
+| where ProcessCommandLine has_any("recoveryenabled no", "bootstatuspolicy")
