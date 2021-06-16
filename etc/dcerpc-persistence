@@ -1,0 +1,9 @@
+dce_rpc_response::c$dce_rpc$endpoint + c$dce_rpc$operation contains any of the following:
+  ISecLogon::SeclCreateProcessWithLogonW
+  ISecLogon::SeclCreateProcessWithLogonExW
+  IRemoteWinspool::RpcAsyncAddMonitor
+  IRemoteWinspool::RpcAsyncAddPrintProcessor
+  spoolss::RpcAddMonitor // winspool | spoolss
+  spoolss::RpcAddPrintProcessor // winspool | spoolss
+  
+Ref: https://github.com/mitre-attack/bzar#46-indicators-for-attck-persistence
