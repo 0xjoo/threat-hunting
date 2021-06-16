@@ -1,0 +1,6 @@
+DeviceProcessEvents
+| where MD5 in~ ("e5d60a23babb075d3722a48a759043c9", "1ae1a8f0c817d9b55768120696ad5f18", "106d289e9f28e3cff569a3d1ba97a908")
+   or FileName contains "mimikatz"\
+   or ProcessCommandLine contains "invoke-mimikatz"
+   or (FileName contains "lsass" and InitiatingProcessCommandLine has_any("logonpasswords", "sekurlsa", "privilege", "debug"))
+   or (ProcessCommandLine has_any("lsass", "mindump", "dmp") and ProcessCommandLine has_any("sekurlsa", "logonpasswords"))
