@@ -1,0 +1,3 @@
+DeviceProcessEvents
+| where FileName =~ "wbadmin.exe" or ProcessCommandLine has "wbadmin"
+| where ProcessCommandLine has "delete catalog" or ProcessCommandLine has "delete systemstatebackup"
