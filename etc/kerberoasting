@@ -1,0 +1,3 @@
+EID: 4769 // "A Kerberos service ticket was requested"
+Ticket Options: 0x40810000
+Ticket Encryption Type: 0x17 // RC4-HMAC encryption
