@@ -1,0 +1,10 @@
+dce_rpc_response::c$dce_rpc$endpoint + c$dce_rpc$operation contains any of the following:
+  InitShutdown::BaseInitiateShutdown
+  InitShutdown::BaseInitiateShutdownEx
+  WindowsShutdown::WsdrInitiateShutdown
+  winreg::BaseInitiateSystemShutdown
+  winreg::BaseInitiateSystemShutdownEx
+  winstation_rpc::RpcWinStationShutdownSystem
+  samr::SamrShutdownSamServer
+  
+Ref: https://github.com/mitre-attack/bzar#47-indicators-for-attck-impact
