@@ -1,0 +1,6 @@
+dce_rpc_response::c$dce_rpc$endpoint + c$dce_rpc$operation contains any of the following:
+  eventlog::ElfrClearELFW
+  eventlog::ElfrClearELFA
+  IEventService::EvtRpcClearLog
+  
+Ref: https://github.com/mitre-attack/bzar#44-indicators-for-attck-defense-evasion
