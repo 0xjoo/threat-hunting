@@ -1,0 +1,4 @@
+SELECT
+  DATEFORMAT(starttime,'YYYY-MM-dd HH:mm:ss') AS 'Start Time'
+FROM
+  events
