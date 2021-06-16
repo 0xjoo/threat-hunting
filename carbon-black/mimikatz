@@ -1,0 +1,3 @@
+process_name:mimikatz*
+  OR cmdline:invoke-mimikatz
+  OR ((crossproc_name:lsass.exe AND (cmdline:logonpasswords OR cmdline:sekurlsa OR (cmdline:privilege AND cmdline:debug))) OR ((cmdline:lsass.exe OR cmdline:mindump OR cmdline:dmp) AND (cmdline:sekurlsa OR cmdline:logonpasswords)))
