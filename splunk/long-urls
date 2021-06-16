@@ -1,0 +1,4 @@
+| eval len=len(url)
+| where len>100
+| stats count by url,len
+| sort -len
