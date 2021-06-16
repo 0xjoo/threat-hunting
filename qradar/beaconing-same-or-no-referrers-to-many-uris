@@ -3,8 +3,10 @@ SELECT
   PA_Referer AS 'Referrer',
   UNIQUECOUNT(PA_Referer) AS 'Unique Count of Referrers',
   REPLACEFIRST('[^\/]*', "WebSense URL", '') AS 'Parsed URI',
+  Websense_Domain AS 'Hostname',
   destinationip AS 'Destination IP',
-  UNIQUECOUNT(destinationip) AS 'Unique Count of Destination IPs'
+  UNIQUECOUNT(destinationip) AS 'Unique Count of Destination IPs',
+  "Object Category"
 FROM
   events
 WHERE
