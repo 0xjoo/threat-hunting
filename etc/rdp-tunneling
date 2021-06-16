@@ -1,0 +1,7 @@
+EID: 4624 // "An account was successfully logged on"
+Logon Type: 10 // RemoteInteractive
+Source IP: 127.0.0.1 // localhost
+
+EID 5156 // "The Windows Filtering Platform has allowed a connection"
+Source IP: 127.0.0.1
+Destination Port: 3389
