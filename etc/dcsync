@@ -1,0 +1,8 @@
+EID: 4662 // "An operation was performed on an object"
+Access Mask: 0x100 // "control access"
+Properties: 
+  {1131f6aa-9c07-11d1-f79f-00c04fc2dcd2} // "DS-Replication-Get-Changes"
+  {1131f6ad-9c07-11d1-f79f-00c04fc2dcd2} // "DS-Replication-Get-Changes-All"
+  {9923a32a-3607-11d2-b9be-0000f87a36b2} // "DS-Install-Replica"
+  {89e95b76-444d-4c62-991a-0facbeda640c} // "DS-Replication-Get-Changes-In-Filtered-Set" (Note: This indicator has yet to be confirmed to be related to DCSync attacks)
+  Replicating Directory Changes all // Logged event string that is identical to GUID "DS-Replication-Get-Changes-All"
