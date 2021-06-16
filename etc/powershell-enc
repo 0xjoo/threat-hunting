@@ -1,0 +1,2 @@
+Command: powershell -NoProfile -ExecutionPolicy bypass –EncodedCommand <base64_encoded_command>
+Obfuscated arguments: -NoProfile (-nop), -ExecutionPolicy (-exe, -exec, -ep), -EncodedCommand (-en, -enc, -ec)
