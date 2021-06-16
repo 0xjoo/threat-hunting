@@ -1,0 +1,4 @@
+smb1_write_andx_response::c$smb_state$path contains ADMIN$ or C$
+smb2_write_request::c$smb_state$path** contains ADMIN$ or C$
+
+Ref: https://github.com/mitre-attack/bzar#41-indicators-for-attck-lateral-movement
