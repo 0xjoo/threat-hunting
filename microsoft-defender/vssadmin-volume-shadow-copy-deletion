@@ -1,0 +1,3 @@
+DeviceProcessEvents
+| where FileName =~ "vssadmin.exe" or ProcessCommandLine has "vssadmin"
+| where ProcessCommandLine has "delete shadows"
