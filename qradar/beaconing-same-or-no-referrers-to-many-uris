@@ -1,0 +1,27 @@
+SELECT
+  DATEFORMAT(starttime, 'YYYY-MM-dd HH:mm:ss') AS 'Start Time',
+  PA_Referer AS 'Referrer',
+  UNIQUECOUNT(PA_Referer) AS 'Unique Count of Referrers',
+  REPLACEFIRST('[^\/]*', "WebSense URL", '') AS 'Parsed URI',
+  destinationip AS 'Destination IP',
+  UNIQUECOUNT(destinationip) AS 'Unique Count of Destination IPs'
+FROM
+  events
+WHERE
+  "Parsed URI" IS NOT NULL
+  AND "Parsed URI" != ''
+  AND "Parsed URI" != '/'
+  AND devicegrouplist = 101268
+  AND (INCIDR('10.0.0.0/8', sourceip)
+    OR INCIDR('172.16.0.0/12', sourceip)
+    OR INCIDR('192.168.0.0/16', sourceip)
+  AND NOT (INCIDR('10.0.0.0/8', destinationip)
+    OR INCIDR('172.16.0.0/12', destinationip)
+    OR INCIDR('192.168.0.0/16', destinationip)
+GROUP BY
+  "Destination IP"
+HAVING
+  "Unique Count of Referrers" = 1
+  AND "Unique Count of URIs" > 3
+  AND "Unique Count of URIs" < 10
+  AND "Unique Count of Destination IPs" = 1
