@@ -1,0 +1,9 @@
+let
+    Source = Excel.CurrentWorkbook(){[Name="Table1"]}[Content],
+    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Log Message", type text}}),
+    #"Split Column by Position" = Table.SplitColumn(#"Changed Type", "Log Message", Splitter.SplitTextByPositions({0, 73}, false), {"Log Message.1", "Log Message.2"}),
+    #"Changed Type1" = Table.TransformColumnTypes(#"Split Column by Position",{{"Log Message.1", type text}, {"Log Message.2", type text}}),
+    #"Replaced Value" = Table.ReplaceValue(#"Changed Type1","\","\\",Replacer.ReplaceText,{"Log Message.2"}),
+    #"Parsed JSON" = Table.TransformColumns(#"Replaced Value",{{"Log Message.2", Json.Document}})
+in
+    #"Parsed JSON"
